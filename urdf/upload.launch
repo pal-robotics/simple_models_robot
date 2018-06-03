@@ -1,0 +1,7 @@
+<launch>
+   <arg name="model" default="" />
+   <!-- urdf to param server -->
+   <param name="robot_description" command="$(find xacro)/xacro.py '$(find simple_models_robot)/urdf/$(arg model).urdf'" />
+
+</launch>
+
