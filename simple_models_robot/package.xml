@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>tiago_robot</name>
+  <name>simple_models_robot</name>
   <version>1.0.9</version>
   <description>Description and controller configuration of TIAGo</description>
   <maintainer email="hilario.tome@pal-robotics.com">Hilario Tome</maintainer>
@@ -9,7 +9,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>simple_models_description</run_depend>
-  <run_depend>simple_models_robot</run_depend>
+  <run_depend>simple_models_controller_configuration</run_depend>
 
   <export>
      <metapackage/>
