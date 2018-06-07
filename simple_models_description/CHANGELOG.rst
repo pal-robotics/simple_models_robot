@@ -2,8 +2,8 @@
 Changelog for package simple_models_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.1 (2018-06-07)
+------------------
 * added sphere
 * Merge branch 'as_more_models' into 'master'
   As more models
