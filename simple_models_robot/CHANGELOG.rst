@@ -2,6 +2,9 @@
 Changelog for package simple_models_robot
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.2 (2018-06-07)
 ------------------
 
