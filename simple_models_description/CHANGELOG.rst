@@ -2,8 +2,8 @@
 Changelog for package simple_models_description
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.4 (2018-06-12)
+------------------
 * Merge branch 'as_fixes_tests' into 'erbium-devel'
   Add tests, follow conventions regarding launch files.
   See merge request robots/simple_models_robot!3
