@@ -2,6 +2,9 @@
 Changelog for package simple_models_controller_configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.3 (2018-06-07)
 ------------------
 * fixed bug in cmake
