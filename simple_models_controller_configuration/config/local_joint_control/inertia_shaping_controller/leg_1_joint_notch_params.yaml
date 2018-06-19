@@ -1,7 +1,7 @@
 motor_inertia: 0.000191658
 static_friction_gain: 0.1
-viscous_friction_gain: 0.2
-global_friction_gain: 0.95
+viscous_friction_gain: 0.3
+global_friction_gain: 0.7
 inertia_compensation_gain: 1.0
 torque_derivative_feedback_gain: 0.0
 
@@ -29,8 +29,14 @@ acceleration_filter:
       type: LowPass
       composition_type: Sequence
       freq: 1000.0
-      cutoff1: 5000.0
+      cutoff1: 50.0
       cutoff2: 0.0
+    - order: 5
+      type: BandReject
+      composition_type: Sequence
+      freq: 1000.0
+      cutoff1: 10.0
+      cutoff2: 30.0
 
 torque_sensor_filter:
   filter_parameters:
@@ -38,8 +44,14 @@ torque_sensor_filter:
       type: LowPass
       composition_type: Sequence
       freq: 1000.0
-      cutoff1: 5000.0
+      cutoff1: 50.0
       cutoff2: 0.0
+    - order: 5
+      type: BandReject
+      composition_type: Sequence
+      freq: 1000.0
+      cutoff1: 10.0
+      cutoff2: 30.0
 
 command_filter:
   filter_parameters:
@@ -47,8 +59,14 @@ command_filter:
       type: LowPass
       composition_type: Sequence
       freq: 1000.0
-      cutoff1: 5000.0
+      cutoff1: 50.0
       cutoff2: 0.0
+    - order: 5
+      type: BandReject
+      composition_type: Sequence
+      freq: 1000.0
+      cutoff1: 10.0
+      cutoff2: 30.0
 
 torque_derivative_filter:
   filter_parameters:
@@ -56,9 +74,15 @@ torque_derivative_filter:
       type: LowPass
       composition_type: Sequence
       freq: 1000.0
-      cutoff1: 5000.0
+      cutoff1: 50.0
       cutoff2: 0.0
+    - order: 5
+      type: BandReject
+      composition_type: Sequence
+      freq: 1000.0
+      cutoff1: 10.0
+      cutoff2: 30.0
 
-use_filtered_torque_sensor: false
-use_filtered_acceleration: false
-use_filtered_command: false
+use_filtered_torque_sensor: true
+use_filtered_acceleration: true
+use_filtered_command: true
