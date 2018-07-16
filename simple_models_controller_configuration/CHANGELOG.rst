@@ -5,6 +5,18 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'observer' into 'erbium-devel'
+  new parameters for inertia shaping controller
+  See merge request robots/simple_models_robot!4
+* added dob file
+* fixed unreasonable filter in perfect joint
+* new parameters for inertia shaping controller
+* 0.0.4
+* Updated changelog
+* Contributors: Hilario Tome, alexandersherikov
+
 0.0.3 (2018-06-07)
 ------------------
 * fixed bug in cmake

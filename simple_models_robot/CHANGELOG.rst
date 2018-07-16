@@ -5,6 +5,12 @@ Changelog for package simple_models_robot
 0.0.4 (2018-06-12)
 ------------------
 
+Forthcoming
+-----------
+* 0.0.4
+* Updated changelog
+* Contributors: alexandersherikov
+
 0.0.3 (2018-06-07)
 ------------------
 
