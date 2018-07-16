@@ -5,8 +5,8 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
-Forthcoming
------------
+0.0.5 (2018-07-16)
+------------------
 * Merge branch 'observer' into 'erbium-devel'
   new parameters for inertia shaping controller
   See merge request robots/simple_models_robot!4
