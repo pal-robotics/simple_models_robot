@@ -1,0 +1,3 @@
+bias_evolution_covariance: 0.01
+oscilator_evolution_covariance: 0.01
+measurement_covariance: 0.01
