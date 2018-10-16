@@ -2,6 +2,6 @@ motor_torque_constant: 0.1031
 torque_sensor_offset: 0.0
 reduction_ratio: 100
 actuator_names:
-  - leg_1_motor
+  - leg_1_motor_perfect
 check_mode: false
 dt: 0.001
