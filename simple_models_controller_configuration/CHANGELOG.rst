@@ -5,8 +5,8 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
-Forthcoming
------------
+0.0.6 (2018-10-17)
+------------------
 * Merge branch 'transmission' into 'erbium-devel'
   fixing tests
   See merge request robots/simple_models_robot!5
