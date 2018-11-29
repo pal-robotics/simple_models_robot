@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'as_safety' into 'erbium-devel'
+  Add safety parameters. Rename config files to match joint names.
+  See merge request robots/simple_models_robot!6
+* Add safety parameters. Rename config files to match joint names.
+* Contributors: alexandersherikov
+
 0.0.6 (2018-10-17)
 ------------------
 

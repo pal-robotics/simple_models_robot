@@ -5,6 +5,15 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'as_safety' into 'erbium-devel'
+  Add safety parameters. Rename config files to match joint names.
+  See merge request robots/simple_models_robot!6
+* Clear joint specific safety parameters.
+* Add safety parameters. Rename config files to match joint names.
+* Contributors: alexandersherikov
+
 0.0.6 (2018-10-17)
 ------------------
 * Merge branch 'transmission' into 'erbium-devel'
