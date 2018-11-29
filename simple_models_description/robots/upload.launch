@@ -5,6 +5,5 @@
     <!-- urdf to param server -->
     <param
         name="robot_description"
-        command="$(find xacro)/xacro.py --inorder '$(find simple_models_description)/urdf/$(arg robot).urdf'" />
+        command="$(find xacro)/xacro --inorder '$(find simple_models_description)/urdf/$(arg robot).urdf'" />
 </launch>
-
