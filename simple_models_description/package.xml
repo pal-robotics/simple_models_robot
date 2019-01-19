@@ -53,6 +53,7 @@
   <exec_depend>xacro</exec_depend>
 
   <test_depend>urdf_test</test_depend>
+  <test_depend>rostest</test_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
