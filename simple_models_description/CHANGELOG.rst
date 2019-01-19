@@ -10,6 +10,11 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Add missing dependency
+* Contributors: Victor Lopez
+
 0.0.7 (2018-11-29)
 ------------------
 * Merge branch 'as_safety' into 'erbium-devel'
