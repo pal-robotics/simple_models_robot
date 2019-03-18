@@ -5,6 +5,15 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'actuator_simulation' into 'erbium-devel'
+  added more paramater to actuators
+  See merge request robots/simple_models_robot!7
+* more parameters
+* added more paramater to actuators
+* Contributors: Hilario Tome
+
 0.0.8 (2019-01-19)
 ------------------
 
