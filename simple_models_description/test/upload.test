@@ -1,14 +1,14 @@
 <launch>
+  <arg name="laser_model"/>
+  <arg name="robot"/>
 
-  <arg name="robot" default=""/>
-
-  <include file="$(find simple_models_description)/robots/upload.launch">
-    <arg name="robot" value="$(arg robot)"/>
-  </include>
-
-  <include file="$(find urdf_test)/launch/test_urdf.launch">
-    <arg name="get_description" value="true"/>
-  </include>
+  <!-- Robot description -->
+  <param name="robot_description"
+      command="$(find xacro)/xacro.py --inorder
+              '$(find simple_models_description)/robots/robot.urdf.xacro'
+    laser_model:=$(arg laser_model)
+    robot:=$(arg robot)"/>
 
 </launch>
+
 
