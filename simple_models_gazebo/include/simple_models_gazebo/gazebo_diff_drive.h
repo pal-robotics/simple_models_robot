@@ -33,8 +33,6 @@
 #include <boost/thread.hpp>
 #include <boost/bind.hpp>
 
-#include <diff_drive_controller/odometry.h>
-
 namespace gazebo
 {
 class Joint;
