@@ -1,5 +1,5 @@
 <launch>
-  <arg name="laser_model"/>
+  <arg name="laser_model" default="sick-551"/>
   <arg name="robot"/>
 
   <!-- Robot description -->
@@ -10,5 +10,3 @@
     robot:=$(arg robot)"/>
 
 </launch>
-
-
