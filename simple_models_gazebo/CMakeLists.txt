@@ -39,7 +39,7 @@ install(TARGETS
 install(DIRECTORY include/
         DESTINATION ${CATKIN_GLOBAL_INCLUDE_DESTINATION})
 
-foreach(dir launch Media models worlds)
+foreach(dir launch)
     install(DIRECTORY ${dir}/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)

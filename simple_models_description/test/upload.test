@@ -9,4 +9,8 @@
     laser_model:=$(arg laser_model)
     robot:=$(arg robot)"/>
 
+  <include file="$(find urdf_test)/launch/test_urdf.launch">
+  	<arg name="get_description" value="true"/>
+  </include>
+
 </launch>
