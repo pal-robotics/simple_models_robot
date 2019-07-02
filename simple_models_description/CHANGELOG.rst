@@ -10,8 +10,8 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+0.0.11 (2019-07-02)
+-------------------
 
 0.0.10 (2019-07-02)
 -------------------
