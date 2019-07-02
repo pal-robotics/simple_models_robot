@@ -10,6 +10,16 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'simple_sim' into 'erbium-devel'
+  Create pmb2 simple sim model
+  See merge request robots/simple_models_robot!8
+* Remove Media / worlds / models + Fix tests
+* Add box. Fix tests
+* Create pmb2 simple sim model
+* Contributors: Adria Roig, Victor Lopez
+
 0.0.9 (2019-03-18)
 ------------------
 
