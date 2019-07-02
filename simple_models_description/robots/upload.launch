@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <launch>
-    <arg name="robot" default="" />
+  <arg name="laser_model"/>
+  <arg name="robot"/>
 
-    <!-- urdf to param server -->
-    <param
-        name="robot_description"
-        command="$(find xacro)/xacro --inorder '$(find simple_models_description)/urdf/$(arg robot).urdf'" />
+  <!-- Robot description -->
+  <param name="robot_description"
+      command="$(find xacro)/xacro.py --inorder
+              '$(find simple_models_description)/robots/robot.urdf.xacro'
+    laser_model:=$(arg laser_model)
+    robot:=$(arg robot)"/>
+
 </launch>
+

@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
-<robot name="four_link_chain">
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
     <link name="base_link">
         <inertial>
             <mass value="1.0"/>
@@ -11,7 +12,7 @@
     <joint name="arm_1_joint" type="revolute">
         <parent link="base_link"/>
         <child link="arm_1_link"/>
-        <origin rpy="0 0 0" xyz="0 0 1.1"/>
+        <origin rpy="1.57079632679490 0 -1.57079632679490" xyz="1.0 0 1.0"/>
         <!--
         <origin rpy="1.57079632679490 0 -1.57079632679490" xyz="0 0 0.971"/>
         <origin rpy="1.57079632679490 0 -1.57079632679490" xyz="1.0 0 1.0"/>
@@ -32,7 +33,7 @@
     <joint name="arm_2_joint" type="revolute">
         <parent link="arm_1_link"/>
         <child link="arm_2_link"/>
-        <origin rpy="0 0 0" xyz="0 0 10.01"/>
+        <origin rpy="3.14159265358979 0 3.14159265358979" xyz="10.01 0 10.01"/>
         <!--
         <origin rpy="3.141593 0 0" xyz="-0.05 0.075 0.021"/>
         <origin rpy="3.14159265358979 0 3.14159265358979" xyz="10.01 0 10.01"/>
@@ -51,9 +52,9 @@
     </link>
 
     <joint name="arm_3_joint" type="revolute">
-        <parent link="arm_2_link"/>
+        <parent link="arm_1_link"/>
         <child link="arm_3_link"/>
-        <origin rpy="0 0 0" xyz="0 0 100.001"/>
+        <origin rpy="3.14159265358979 0 3.14159265358979" xyz="100.001 0 100.001"/>
         <!--
         <origin rpy="3.14159265358979 0 0" xyz="0 0 100.001"/>
         <origin rpy="3.141593 0 3.141593" xyz="0 -0.25 0.07"/>
