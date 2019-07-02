@@ -5,6 +5,14 @@ Changelog for package simple_models_robot
 0.0.4 (2018-06-12)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'metapkg' into 'erbium-devel'
+  Add missing run_depend in metapkg
+  See merge request robots/simple_models_robot!9
+* Add missing run_depend in metapkg
+* Contributors: Adria Roig, Victor Lopez
+
 0.0.10 (2019-07-02)
 -------------------
 
