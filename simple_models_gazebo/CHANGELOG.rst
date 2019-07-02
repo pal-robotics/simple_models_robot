@@ -2,8 +2,8 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.10 (2019-07-02)
+-------------------
 * Fix pkg version
 * Merge branch 'simple_sim' into 'erbium-devel'
   Create pmb2 simple sim model
