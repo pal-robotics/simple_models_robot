@@ -119,8 +119,8 @@ void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
     this->update_period_ = 1.0 / this->update_rate_;
   else
     this->update_period_ = 0.0;
-  last_update_time_ = model_->GetWorld()->GetSimTime();
-  last_callback_time_ = model_->GetWorld()->GetSimTime();
+  last_update_time_ = model_->GetWorld()->SimTime();
+  last_callback_time_ = model_->GetWorld()->SimTime();
 
   // Initialize velocity stuff
   wheel_speed_[RIGHT] = 0;
@@ -169,7 +169,7 @@ void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
 
 void GazeboDiffDrive::Reset()
 {
-  last_update_time_ = model_->GetWorld()->GetSimTime();
+  last_update_time_ = model_->GetWorld()->SimTime();
   pose_encoder_.x = 0;
   pose_encoder_.y = 0;
   pose_encoder_.theta = 0;
@@ -184,7 +184,7 @@ void GazeboDiffDrive::UpdateChild()
 
   if (odom_source_ == ENCODER)
     UpdateOdometryEncoder();
-  common::Time current_time = model_->GetWorld()->GetSimTime();
+  common::Time current_time = model_->GetWorld()->SimTime();
   double seconds_since_last_update = (current_time - last_update_time_).Double();
 
   double seconds_since_last_callback_update = (current_time - last_callback_time_).Double();
@@ -200,7 +200,7 @@ void GazeboDiffDrive::UpdateChild()
     if (this->publish_tf_)
       publishOdometry(seconds_since_last_update);
 
-    ignition::math::Vector3d linear_vel = model_->GetWorldPose().Ign().Rot() * ignition::math::Vector3d(x_, 0, 0);
+    ignition::math::Vector3d linear_vel = model_->WorldPose().Rot() * ignition::math::Vector3d(x_, 0, 0);
     linear_vel.Z(0.0);
 
     model_->SetWorldTwist(linear_vel, ignition::math::Vector3d(0, 0, rot_));
@@ -224,7 +224,7 @@ void GazeboDiffDrive::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_m
   boost::mutex::scoped_lock scoped_lock(lock);
   x_ = cmd_msg->linear.x;
   rot_ = cmd_msg->angular.z;
-  last_callback_time_ = model_->GetWorld()->GetSimTime();
+  last_callback_time_ = model_->GetWorld()->SimTime();
 }
 
 void GazeboDiffDrive::QueueThread()
@@ -255,7 +255,7 @@ void GazeboDiffDrive::UpdateOdometryEncoder()
     wr = x_ + rot_ * wheel_separation_ / 2.0;
   }
 
-  common::Time current_time = model_->GetWorld()->GetSimTime();
+  common::Time current_time = model_->GetWorld()->SimTime();
   double seconds_since_last_update = (current_time - last_odom_update_).Double();
   last_odom_update_ = current_time;
 
@@ -345,8 +345,8 @@ void GazeboDiffDrive::publishOdometry(double step_time)
 
     // get velocity in /odom frame
     ignition::math::Vector3d linear;
-    linear = model_->GetWorldLinearVel().Ign();
-    odom_.twist.twist.angular.z = model_->GetWorldAngularVel().Ign().Z();
+    linear = model_->WorldLinearVel();
+    odom_.twist.twist.angular.z = model_->WorldAngularVel().Z();
 
     // convert velocity to child_frame_id (aka base_footprint)
     float yaw = pose.Rot().Yaw();
