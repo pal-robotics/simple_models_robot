@@ -4,6 +4,7 @@ project(simple_models_gazebo)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++0x")
 
 find_package(gazebo REQUIRED)
+find_package(Boost REQUIRED)
 find_package(catkin REQUIRED COMPONENTS
     gazebo_ros
     gazebo_plugins
@@ -13,12 +14,13 @@ catkin_package(
   INCLUDE_DIRS include
   LIBRARIES gazebo_diff_drive # gazebo_force_control
   CATKIN_DEPENDS gazebo_ros
-  DEPENDS GAZEBO
+  DEPENDS GAZEBO Boost
 )
 
 string(REPLACE "-lpthread;" "" GAZEBO_LIBRARIES "${GAZEBO_LIBRARIES}")
 
-include_directories(SYSTEM ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS} ${SDFormat_INCLUDE_DIRS})
+include_directories(SYSTEM ${catkin_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS}
+    ${SDFormat_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
 include_directories(include)
 
 link_directories(${GAZEBO_LIBRARY_DIRS})

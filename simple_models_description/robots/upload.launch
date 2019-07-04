@@ -1,5 +1,5 @@
 <launch>
-  <arg name="laser_model"/>
+  <arg name="laser_model" default="false"/>
   <arg name="robot"/>
 
   <!-- Robot description -->
