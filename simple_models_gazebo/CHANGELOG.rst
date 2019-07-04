@@ -2,6 +2,16 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'melodic-devel' into 'erbium-devel'
+  Melodic devel
+  See merge request robots/simple_models_robot!10
+* Fix undefined ignition math version with boost
+* Add a macro to handle both versions
+* Fix compilation for melodic
+* Contributors: Adria Roig, Victor Lopez, root
+
 0.0.11 (2019-07-02)
 -------------------
 
