@@ -44,9 +44,13 @@
 #include <ignition/math/Pose3.hh>
 #include <ignition/math/Quaternion.hh>
 #include <ignition/math/Vector3.hh>
+#include <boost/preprocessor.hpp>
 #include <sdf/sdf.hh>
 
 #include <ros/ros.h>
+
+#define KINETIC_MATH_VERSION 2
+#define MELODIC_MATH_VERSION 4
 
 namespace gazebo
 {
@@ -120,7 +124,7 @@ void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
   else
     this->update_period_ = 0.0;
 
-#if IGNITION_MATH_MAJOR_VERSION == 2
+#if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
   last_update_time_ = model_->GetWorld()->GetSimTime();
   last_callback_time_ = model_->GetWorld()->GetSimTime();
 #else
@@ -175,7 +179,7 @@ void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
 
 void GazeboDiffDrive::Reset()
 {
-#if IGNITION_MATH_MAJOR_VERSION == 2
+#if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
   last_update_time_ = model_->GetWorld()->GetSimTime();
 #else
   last_update_time_ = model_->GetWorld()->SimTime();
@@ -195,7 +199,7 @@ void GazeboDiffDrive::UpdateChild()
   if (odom_source_ == ENCODER)
     UpdateOdometryEncoder();
 
-#if IGNITION_MATH_MAJOR_VERSION == 2
+#if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
   common::Time current_time = model_->GetWorld()->GetSimTime();
 #else
   common::Time current_time = model_->GetWorld()->SimTime();
@@ -216,7 +220,7 @@ void GazeboDiffDrive::UpdateChild()
     if (this->publish_tf_)
       publishOdometry(seconds_since_last_update);
 
-#if IGNITION_MATH_MAJOR_VERSION == 2
+#if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
     ignition::math::Vector3d linear_vel = model_->GetWorldPose().Ign().Rot() * ignition::math::Vector3d(x_, 0, 0);
 #else
     ignition::math::Vector3d linear_vel = model_->WorldPose().Rot() * ignition::math::Vector3d(x_, 0, 0);
@@ -245,7 +249,7 @@ void GazeboDiffDrive::cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_m
   boost::mutex::scoped_lock scoped_lock(lock);
   x_ = cmd_msg->linear.x;
   rot_ = cmd_msg->angular.z;
-#if IGNITION_MATH_MAJOR_VERSION
+#if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
   last_callback_time_ = model_->GetWorld()->GetSimTime();
 #else
   last_callback_time_ = model_->GetWorld()->SimTime();
@@ -280,7 +284,7 @@ void GazeboDiffDrive::UpdateOdometryEncoder()
     wr = x_ + rot_ * wheel_separation_ / 2.0;
   }
 
-#if IGNITION_MATH_MAJOR_VERSION == 2
+#if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
   common::Time current_time = model_->GetWorld()->GetSimTime();
 #else
   common::Time current_time = model_->GetWorld()->SimTime();
@@ -375,7 +379,7 @@ void GazeboDiffDrive::publishOdometry(double step_time)
 
     // get velocity in /odom frame
     ignition::math::Vector3d linear;
-#if IGNITION_MATH_MAJOR_VERSION == 2
+#if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
     linear = model_->GetWorldLinearVel().Ign();
     odom_.twist.twist.angular.z = model_->GetWorldAngularVel().Ign().Z();
 #else

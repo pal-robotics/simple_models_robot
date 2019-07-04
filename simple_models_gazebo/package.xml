@@ -10,6 +10,7 @@
   <buildtool_depend>catkin</buildtool_depend>
 
   <depend>gazebo</depend>
+  <depend>boost</depend>
   <depend>gazebo_ros</depend>
   <depend>gazebo_plugins</depend>
   <exec_depend>pal_gazebo_worlds</exec_depend>
