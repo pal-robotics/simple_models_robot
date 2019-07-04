@@ -10,8 +10,8 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+0.0.12 (2019-07-04)
+-------------------
 * Merge branch 'melodic-devel' into 'erbium-devel'
   Melodic devel
   See merge request robots/simple_models_robot!10
