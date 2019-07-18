@@ -2,8 +2,8 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.13 (2019-07-18)
+-------------------
 * Merge branch 'multi_pmb2' into 'erbium-devel'
   Change for muliple pmb2 navigation
   See merge request robots/simple_models_robot!11
