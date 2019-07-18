@@ -19,7 +19,14 @@
     <wheelSeparation>0.4044</wheelSeparation>
     <wheelDiameter>0.197</wheelDiameter>
     <torque>6</torque>
-    <commandTopic>nav_vel</commandTopic>
+    <xacro:if value="${is_multiple}">
+      <robotNamespace>/${nsp}</robotNamespace>
+      <commandTopic>/${nsp}/nav_vel</commandTopic>
+    </xacro:if>
+    <xacro:unless value="${is_multiple}">
+      <robotNamespace></robotNamespace>
+      <commandTopic>nav_vel</commandTopic>
+    </xacro:unless>
     <odometryTopic>odom</odometryTopic>
     <odometryFrame>odom</odometryFrame>
     <robotBaseFrame>base_link</robotBaseFrame>
