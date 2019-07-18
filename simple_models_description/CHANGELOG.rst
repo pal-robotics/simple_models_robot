@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'multi_pmb2' into 'erbium-devel'
+  Change for muliple pmb2 navigation
+  See merge request robots/simple_models_robot!11
+* Change for muliple pmb2 navigation
+* Contributors: Adria Roig, Victor Lopez
+
 0.0.12 (2019-07-04)
 -------------------
 * Merge branch 'melodic-devel' into 'erbium-devel'
