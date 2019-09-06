@@ -86,6 +86,7 @@ private:
   std::string odometry_topic_;
   std::string odometry_frame_;
   std::string robot_base_frame_;
+  bool gravity_;
   bool publish_tf_;
   bool legacy_mode_;
   // Custom Callback Queue

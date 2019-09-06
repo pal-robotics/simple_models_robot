@@ -100,6 +100,7 @@ void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
   gazebo_ros_->getParameter<double>(wheel_accel, "wheelAcceleration", 0.0);
   gazebo_ros_->getParameter<double>(wheel_torque, "wheelTorque", 5.0);
   gazebo_ros_->getParameter<double>(update_rate_, "updateRate", 100.0);
+  gazebo_ros_->getParameter<bool>(gravity_, "gravity", true);
 
   std::map<std::string, OdomSource> odomOptions;
   odomOptions["encoder"] = ENCODER;
@@ -164,7 +165,7 @@ void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
                    odometry_topic_.c_str());
   }
 
-  model_->SetGravityMode(false);
+  model_->SetGravityMode(gravity_);
 
   transform_broadcaster_ = boost::shared_ptr<tf::TransformBroadcaster>(new tf::TransformBroadcaster());
 
