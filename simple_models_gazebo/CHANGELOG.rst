@@ -2,6 +2,15 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'friction' into 'erbium-devel'
+  Friction
+  See merge request robots/simple_models_robot!15
+* Add gravity and remove friction
+* Allow using model with gravity
+* Contributors: Adria Roig, Victor Lopez, davidfernandez
+
 0.0.13 (2019-07-18)
 -------------------
 * Merge branch 'multi_pmb2' into 'erbium-devel'

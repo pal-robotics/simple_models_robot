@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'friction' into 'erbium-devel'
+  Friction
+  See merge request robots/simple_models_robot!15
+* Add gravity and remove friction
+* Contributors: Adria Roig, Victor Lopez
+
 0.0.13 (2019-07-18)
 -------------------
 * Merge branch 'multi_pmb2' into 'erbium-devel'
