@@ -2,8 +2,8 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.14 (2019-09-06)
+-------------------
 * Merge branch 'friction' into 'erbium-devel'
   Friction
   See merge request robots/simple_models_robot!15
