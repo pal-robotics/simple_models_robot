@@ -10,8 +10,8 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+0.0.15 (2019-09-19)
+-------------------
 * Merge branch 'ferrum-fixes' into 'erbium-devel'
   Ferrum compatibility. 'false' is read as False in melodic
   See merge request robots/simple_models_robot!16
