@@ -10,8 +10,8 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+0.0.16 (2019-10-21)
+-------------------
 * Merge branch 'fix-frame-ns' into 'erbium-devel'
   fixed using model name as tf prefixs
   See merge request robots/simple_models_robot!18
