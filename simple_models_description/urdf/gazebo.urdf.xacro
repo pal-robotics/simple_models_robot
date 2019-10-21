@@ -21,11 +21,11 @@
     <torque>6</torque>
     <xacro:if value="${is_multiple}">
       <robotNamespace>/${nsp}</robotNamespace>
-      <commandTopic>/${nsp}/nav_vel</commandTopic>
+      <commandTopic>/${nsp}/mobile_base_controller/cmd_vel</commandTopic>
     </xacro:if>
     <xacro:unless value="${is_multiple}">
-      <robotNamespace></robotNamespace>
-      <commandTopic>nav_vel</commandTopic>
+      <robotNamespace>/</robotNamespace>
+      <commandTopic>/mobile_base_controller/cmd_vel</commandTopic>
     </xacro:unless>
     <odometryTopic>odom</odometryTopic>
     <odometryFrame>odom</odometryFrame>
