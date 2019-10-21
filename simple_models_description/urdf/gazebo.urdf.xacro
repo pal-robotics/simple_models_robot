@@ -24,7 +24,7 @@
       <commandTopic>/${nsp}/nav_vel</commandTopic>
     </xacro:if>
     <xacro:unless value="${is_multiple}">
-      <robotNamespace></robotNamespace>
+      <robotNamespace>/</robotNamespace>
       <commandTopic>nav_vel</commandTopic>
     </xacro:unless>
     <odometryTopic>odom</odometryTopic>
