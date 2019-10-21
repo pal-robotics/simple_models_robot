@@ -10,6 +10,16 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'fix-frame-ns' into 'erbium-devel'
+  fixed using model name as tf prefixs
+  See merge request robots/simple_models_robot!18
+* gazebo laser outputs scan_raw instead of scan
+* simple model vel input now is mobile_base_controller/cmd_vel now
+* fixed using model name as tf prefixs
+* Contributors: Procópio Stein
+
 0.0.15 (2019-09-19)
 -------------------
 * Merge branch 'ferrum-fixes' into 'erbium-devel'
