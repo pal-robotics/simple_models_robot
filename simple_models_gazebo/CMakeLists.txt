@@ -28,11 +28,21 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 add_library(gazebo_diff_drive src/gazebo_diff_drive.cpp)
 target_link_libraries(gazebo_diff_drive ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
 
+add_library(gazebo_diff_drive_plugin src/gazebo_diff_drive_plugin.cpp)
+target_link_libraries(gazebo_diff_drive_plugin gazebo_diff_drive ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
+
+add_library(gazebo_zero_wheel_vel src/gazebo_zero_wheel_vel.cpp)
+target_link_libraries(gazebo_zero_wheel_vel ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
+
+add_library(gazebo_four_wheel_diff_drive_plugin src/gazebo_four_wheel_diff_drive_plugin.cpp)
+target_link_libraries(gazebo_four_wheel_diff_drive_plugin gazebo_diff_drive ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
+
 # add_library(gazebo_force_control src/gazebo_force_control.cpp)
 # target_link_libraries(gazebo_force_control ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES})
 
 install(TARGETS
-    gazebo_diff_drive # gazebo_force_control
+    gazebo_diff_drive gazebo_zero_wheel_vel gazebo_diff_drive_plugin
+    gazebo_four_wheel_diff_drive_plugin # gazebo_force_control
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
     LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
     )

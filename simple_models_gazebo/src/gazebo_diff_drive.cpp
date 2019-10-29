@@ -49,9 +49,6 @@
 
 #include <ros/ros.h>
 
-#define KINETIC_MATH_VERSION 2
-#define MELODIC_MATH_VERSION 4
-
 namespace gazebo
 {
 enum
@@ -69,8 +66,7 @@ GazeboDiffDrive::~GazeboDiffDrive()
 {
 }
 
-// Load the controller
-void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
+void GazeboDiffDrive::LoadGeneric(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
 {
   this->model_ = _parent;
   gazebo_ros_ = GazeboRosPtr(new GazeboRos(_parent, _sdf, "DiffDrive"));
@@ -100,7 +96,6 @@ void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
   gazebo_ros_->getParameter<double>(wheel_accel, "wheelAcceleration", 0.0);
   gazebo_ros_->getParameter<double>(wheel_torque, "wheelTorque", 5.0);
   gazebo_ros_->getParameter<double>(update_rate_, "updateRate", 100.0);
-  gazebo_ros_->getParameter<bool>(gravity_, "gravity", true);
 
   std::map<std::string, OdomSource> odomOptions;
   odomOptions["encoder"] = ENCODER;
@@ -165,20 +160,15 @@ void GazeboDiffDrive::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
                    odometry_topic_.c_str());
   }
 
-  model_->SetGravityMode(gravity_);
-
-  transform_broadcaster_ = boost::shared_ptr<tf::TransformBroadcaster>(new tf::TransformBroadcaster());
+  transform_broadcaster_ =
+      boost::shared_ptr<tf::TransformBroadcaster>(new tf::TransformBroadcaster());
 
   // start custom queue for diff drive
   this->callback_queue_thread_ =
       boost::thread(boost::bind(&GazeboDiffDrive::QueueThread, this));
-
-  // listen to the update event (broadcast every simulation iteration)
-  this->update_connection_ = event::Events::ConnectWorldUpdateBegin(
-      boost::bind(&GazeboDiffDrive::UpdateChild, this));
 }
 
-void GazeboDiffDrive::Reset()
+void GazeboDiffDrive::ResetGeneric()
 {
 #if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
   last_update_time_ = model_->GetWorld()->GetSimTime();
@@ -193,50 +183,38 @@ void GazeboDiffDrive::Reset()
 }
 
 // Update the controller
-void GazeboDiffDrive::UpdateChild()
+void GazeboDiffDrive::UpdateChildGeneric()
 {
-  boost::mutex::scoped_lock scoped_lock ( lock );
-
   if (odom_source_ == ENCODER)
     UpdateOdometryEncoder();
 
 #if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
-  common::Time current_time = model_->GetWorld()->GetSimTime();
+  current_time_ = model_->GetWorld()->GetSimTime();
 #else
-  common::Time current_time = model_->GetWorld()->SimTime();
+  current_time_ = model_->GetWorld()->SimTime();
 #endif
 
-  double seconds_since_last_update = (current_time - last_update_time_).Double();
+  double seconds_since_last_callback_update = (current_time_ - last_callback_time_).Double();
 
-  double seconds_since_last_callback_update = (current_time - last_callback_time_).Double();
-
-  if(seconds_since_last_callback_update > update_period_)
+  if (seconds_since_last_callback_update > update_period_)
   {
     x_ = 0.0;
     rot_ = 0.0;
   }
 
-  if (seconds_since_last_update > update_period_)
+  seconds_since_last_update_ = (current_time_ - last_update_time_).Double();
+
+  if (seconds_since_last_update_ > update_period_)
   {
     if (this->publish_tf_)
-      publishOdometry(seconds_since_last_update);
-
-#if BOOST_PP_LESS_EQUAL(IGNITION_MATH_MAJOR_VERSION, KINETIC_MATH_VERSION)
-    ignition::math::Vector3d linear_vel = model_->GetWorldPose().Ign().Rot() * ignition::math::Vector3d(x_, 0, 0);
-#else
-    ignition::math::Vector3d linear_vel = model_->WorldPose().Rot() * ignition::math::Vector3d(x_, 0, 0);
-#endif
-
-    linear_vel.Z(0.0);
-
-    model_->SetWorldTwist(linear_vel, ignition::math::Vector3d(0, 0, rot_));
+      publishOdometry(seconds_since_last_update_);
 
     last_update_time_ += common::Time(update_period_);
   }
 }
 
 // Finalize the controller
-void GazeboDiffDrive::FiniChild()
+void GazeboDiffDrive::FiniChildGeneric()
 {
   alive_ = false;
   queue_.clear();
@@ -269,12 +247,12 @@ void GazeboDiffDrive::QueueThread()
 
 void GazeboDiffDrive::UpdateOdometryEncoder()
 {
-  boost::mutex::scoped_lock scoped_lock ( lock );
+  boost::mutex::scoped_lock scoped_lock(lock);
 
   double wl = 0;
   double wr = 0;
 
-  if(legacy_mode_)
+  if (legacy_mode_)
   {
     wl = x_ + rot_ * wheel_separation_ / 2.0;
     wr = x_ - rot_ * wheel_separation_ / 2.0;
@@ -347,7 +325,7 @@ void GazeboDiffDrive::publishOdometry(double step_time)
   std::string odom_frame = gazebo_ros_->resolveTF(odometry_frame_);
   std::string base_footprint_frame = gazebo_ros_->resolveTF(robot_base_frame_);
 
-  tf::Quaternion qt(0., 0., 0., 1.);
+  tf::Quaternion qt(0, 0, 0, 1);
   tf::Vector3 vt;
 
   if (odom_source_ == ENCODER)
@@ -415,6 +393,4 @@ void GazeboDiffDrive::publishOdometry(double step_time)
 
   odometry_publisher_.publish(odom_);
 }
-
-GZ_REGISTER_MODEL_PLUGIN(GazeboDiffDrive)
 }

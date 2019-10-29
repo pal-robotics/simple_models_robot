@@ -33,12 +33,15 @@
 #include <boost/thread.hpp>
 #include <boost/bind.hpp>
 
+#define KINETIC_MATH_VERSION 2
+#define MELODIC_MATH_VERSION 4
+
 namespace gazebo
 {
 class Joint;
 class Entity;
 
-class GazeboDiffDrive : public ModelPlugin
+class GazeboDiffDrive
 {
   enum OdomSource
   {
@@ -49,17 +52,14 @@ class GazeboDiffDrive : public ModelPlugin
 public:
   GazeboDiffDrive();
   ~GazeboDiffDrive();
-  void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf);
-  void Reset();
+  void ResetGeneric();
+  void UpdateChildGeneric();
+  void FiniChildGeneric();
 
-protected:
-  virtual void UpdateChild();
-  virtual void FiniChild();
-
-private:
   void publishOdometry(double step_time);
   void UpdateOdometryEncoder();
 
+  void LoadGeneric(physics::ModelPtr _parent, sdf::ElementPtr _sdf);
 
   GazeboRosPtr gazebo_ros_;
   physics::ModelPtr model_;
@@ -86,7 +86,6 @@ private:
   std::string odometry_topic_;
   std::string odometry_frame_;
   std::string robot_base_frame_;
-  bool gravity_;
   bool publish_tf_;
   bool legacy_mode_;
   // Custom Callback Queue
@@ -110,6 +109,8 @@ private:
   OdomSource odom_source_;
   geometry_msgs::Pose2D pose_encoder_;
   common::Time last_odom_update_;
+  common::Time current_time_;
+  double seconds_since_last_update_;
 };
 }
 
