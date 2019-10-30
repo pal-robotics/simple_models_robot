@@ -57,12 +57,12 @@ void GazeboDiffDrivePlugin::UpdateChild()
                                           ignition::math::Vector3d(diff_drive_.x_, 0, 0);
 #else
     ignition::math::Vector3d linear_vel =
-        diff_drive_.model_->WorldPose().Rot() * ignition::math::Vector3d(x_, 0, 0);
+        diff_drive_.model_->WorldPose().Rot() * ignition::math::Vector3d(diff_drive_.x_, 0, 0);
 #endif
     linear_vel.Z(0.0);
 
 #if GAZEBO_MAJOR_VERSION >= 8
-    ignition::math::Pose3d pose = model_->WorldPose();
+    ignition::math::Pose3d pose = diff_drive_.model_->WorldPose();
 #else
     ignition::math::Pose3d pose = diff_drive_.model_->GetWorldPose().Ign();
 #endif
