@@ -2,6 +2,15 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'ivo_plugins' into 'erbium-devel'
+  Add four wheel plugin
+  See merge request robots/simple_models_robot!19
+* Fix ferrum compilation
+* Add four wheel plugin
+* Contributors: Adria Roig
+
 0.0.16 (2019-10-21)
 -------------------
 

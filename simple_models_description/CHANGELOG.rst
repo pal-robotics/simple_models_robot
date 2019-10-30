@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'ivo_plugins' into 'erbium-devel'
+  Add four wheel plugin
+  See merge request robots/simple_models_robot!19
+* Add four wheel plugin
+* Contributors: Adria Roig
+
 0.0.16 (2019-10-21)
 -------------------
 * Merge branch 'fix-frame-ns' into 'erbium-devel'
