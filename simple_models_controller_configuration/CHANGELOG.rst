@@ -5,6 +5,14 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'specifics_refactor' into 'erbium-devel'
+  added safety specific file for tests
+  See merge request robots/simple_models_robot!20
+* added specific files for tests
+* Contributors: Jordan Palacios, Sai Kishor Kothakota
+
 0.0.17 (2019-10-30)
 -------------------
 

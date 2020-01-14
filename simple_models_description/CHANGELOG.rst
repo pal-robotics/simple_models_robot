@@ -10,6 +10,9 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+
 0.0.17 (2019-10-30)
 -------------------
 * Merge branch 'ivo_plugins' into 'erbium-devel'
