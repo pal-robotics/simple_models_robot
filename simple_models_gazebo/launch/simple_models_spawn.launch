@@ -5,7 +5,7 @@
   <arg name="multi"  default=""/>
   <arg name="model_name"  default="pmb2"/>
 
-  <rosparam ns="pal_robot_info" param="type">"pmb2"</rosparam>
+  <rosparam ns="pal_robot_info" param="type">"$(arg model_name)"</rosparam>
 
   <!-- Robot model -->
   <include file="$(find simple_models_description)/robots/upload.launch">
