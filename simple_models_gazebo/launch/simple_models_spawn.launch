@@ -12,6 +12,7 @@
     <arg name="laser_model" value="$(arg laser_model)"/>
     <arg name="robot" value="$(arg robot)"/>
     <arg name="multi" value="$(arg multi)"/>
+    <arg name="model_name"  value="$(arg model_name)"/>
   </include>
 
   <!-- Spawn robot in Gazebo -->
