@@ -16,14 +16,14 @@
   <link name="base_link">
     <inertial>
       <origin xyz="-0.00381 0.00312 0.43029" rpy="0 0 0" />
-      <mass value="64.24132" />
+      <mass value="0.1" />
       <inertia ixx="11.896358" ixy="0.001117" ixz="-0.200645"
                iyy="11.897509" iyz="0.11063"
                izz="0.796967"/>
     </inertial>
 
     <visual>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 -0.35" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://stockbot_description/meshes/base/base_and_cover.stl" scale="${mesh_scale} ${mesh_scale} ${mesh_scale}"/>
       </geometry>
@@ -31,7 +31,7 @@
     </visual>
 
     <collision>
-      <origin xyz="0 0 0" rpy="0 0 0" />
+      <origin xyz="0 0 -0.35" rpy="0 0 0" />
       <geometry>
         <mesh filename="package://stockbot_description/meshes/base/base_and_cover.stl" scale="${mesh_scale} ${mesh_scale} ${mesh_scale}"/>
       </geometry>
@@ -46,69 +46,5 @@
     <origin xyz="0 0 0.09877" rpy="0 0 0" />
     <child link="base_footprint" />
     <parent link="base_link"/>
-  </joint>
-
-  <!-- left wheel -->
-  <link name="wheel_left_link">
-    <inertial>
-      <origin xyz="0 ${0.02086 * -1.0} -0.00259" rpy="0 0 0"/>
-      <mass value="4.31508"/>
-      <inertia ixx="0.013545" ixy="0" ixz="0"
-               iyy="0.010718" iyz="${-0.000921 * -1.0}"
-               izz="0.013395"/>
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 ${-90 * deg_to_rad} 0"/>
-      <geometry>
-        <mesh filename="package://stockbot_description/meshes/wheels/wheel.stl" scale="0.001 0.001 0.001"/>
-      </geometry>
-      <material name="Grey"/>
-    </visual>
-
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
-      </geometry>
-    </collision>
-  </link>
-  <joint name="wheel_left_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="wheel_left_link"/>
-    <origin xyz="0 ${-1.0 * -wheel_separation / 2} 0" rpy="${-90 * -1.0 * deg_to_rad} 0 0"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="${wheel_torque}" velocity="${wheel_velocity / wheel_radius}"/>
-  </joint>
-
-  <!-- right wheel -->
-  <link name="wheel_right_link">
-    <inertial>
-      <origin xyz="0 ${0.02086 * 1.0} -0.00259" rpy="0 0 0"/>
-      <mass value="4.31508"/>
-      <inertia ixx="0.013545" ixy="0" ixz="0"
-               iyy="0.010718" iyz="${-0.000921 * 1.0}"
-               izz="0.013395"/>
-    </inertial>
-    <visual>
-      <origin xyz="0 0 0" rpy="0 ${-90 * deg_to_rad} 0"/>
-      <geometry>
-        <mesh filename="package://stockbot_description/meshes/wheels/wheel.stl" scale="0.001 0.001 0.001"/>
-      </geometry>
-      <material name="Grey"/>
-    </visual>
-
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <cylinder radius="${wheel_radius}" length="${wheel_width}"/>
-      </geometry>
-    </collision>
-  </link>
-  <joint name="wheel_right_joint" type="fixed">
-    <parent link="base_footprint"/>
-    <child link="wheel_right_link"/>
-    <origin xyz="0 ${1.0 * -wheel_separation / 2} 0" rpy="${-90 * 1.0 * deg_to_rad} 0 0"/>
-    <axis xyz="0 0 1"/>
-    <limit effort="${wheel_torque}" velocity="${wheel_velocity / wheel_radius}"/>
   </joint>
 </robot>
