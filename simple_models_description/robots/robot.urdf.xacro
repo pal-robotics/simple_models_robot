@@ -16,16 +16,17 @@
   <xacro:property name="nsp" value="$(arg namespace)" />
 
   <xacro:include filename="$(find simple_models_description)/urdf/$(arg robot).urdf.xacro" />
-  <xacro:include filename="$(find simple_models_description)/urdf/sensors.urdf.xacro" />
 
   <xacro:if value="${robot_model == 'pmb2'}">
     <xacro:include filename="$(find pmb2_description)/gazebo/gazebo.urdf.xacro" />
     <xacro:include filename="$(find pmb2_description)/urdf/materials.urdf.xacro" />
+    <xacro:include filename="$(find simple_models_description)/urdf/sensors.urdf.xacro" />
   </xacro:if>
 
   <xacro:if value="${robot_model == 'stockbot'}">
     <xacro:include filename="$(find stockbot_description)/gazebo/gazebo.urdf.xacro" />
     <xacro:include filename="$(find stockbot_description)/urdf/materials.urdf.xacro" />
+    <xacro:include filename="$(find simple_models_description)/urdf/stockbot_sensors.urdf.xacro" />
   </xacro:if>
 
   <xacro:include filename="$(find simple_models_description)/urdf/gazebo.urdf.xacro" />
