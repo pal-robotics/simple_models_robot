@@ -2,8 +2,8 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.20 (2020-04-06)
+-------------------
 * Merge branch 'simple-model-fixes' into 'erbium-devel'
   fixed spawn args
   See merge request robots/simple_models_robot!23
