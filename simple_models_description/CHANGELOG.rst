@@ -10,6 +10,22 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'simple_stockbot_model' into 'erbium-devel'
+  add simple stockbot model
+  See merge request robots/simple_models_robot!21
+* added simple stockbot test
+* simplified args and fixed test
+* fixed frames order
+* updated simple stockbot urdf xacro
+* separate sensors files for stockbot
+* remove stockbot wheels and update mass and origin
+* adapt robot.urdf.xacro according to the robot
+* add robot_name and change wheel joint type to fixed in stockbot simple model
+* add simple stockbot model
+* Contributors: Adria Roig, Procópio Stein, YueErro
+
 0.0.18 (2020-01-14)
 -------------------
 

@@ -2,6 +2,15 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'simple_stockbot_model' into 'erbium-devel'
+  add simple stockbot model
+  See merge request robots/simple_models_robot!21
+* adapt robot.urdf.xacro according to the robot
+* rosparam from model_name arg in simple_models_spawn.launch
+* Contributors: Adria Roig, YueErro
+
 0.0.18 (2020-01-14)
 -------------------
 
