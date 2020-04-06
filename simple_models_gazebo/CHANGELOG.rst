@@ -2,8 +2,8 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.19 (2020-04-06)
+-------------------
 * Merge branch 'simple_stockbot_model' into 'erbium-devel'
   add simple stockbot model
   See merge request robots/simple_models_robot!21

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>simple_models_gazebo</name>
-  <version>0.0.18</version>
+  <version>0.0.19</version>
   <description>The simple_models_gazebo package</description>
   <maintainer email="adria.roig@pal-robotics.com">Adrià Roig</maintainer>
 
