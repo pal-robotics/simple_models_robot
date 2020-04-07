@@ -10,8 +10,8 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+0.0.21 (2020-04-07)
+-------------------
 * Merge branch 'fix-tests' into 'erbium-devel'
   Fix tests
   See merge request robots/simple_models_robot!24
