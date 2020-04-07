@@ -1,7 +1,8 @@
 <launch>
   <arg name="laser_model" default="false"/>
-  <arg name="robot"       default="simple_pmb2"/>
-  <arg name="multi"       default=""/>
+  <arg name="robot"/>
+  <arg name="multi" default=""/>
+  <arg name="model_name"/>
 
   <!-- Robot description -->
   <param name="robot_description"
@@ -9,6 +10,7 @@
               '$(find simple_models_description)/robots/robot.urdf.xacro'
     laser_model:=$(arg laser_model)
     robot:=$(arg robot)
+    model_name:=$(arg model_name)
     $(arg multi)"/>
 
 </launch>
