@@ -2,6 +2,14 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-tests' into 'erbium-devel'
+  Fix tests
+  See merge request robots/simple_models_robot!24
+* restored passing arg model name
+* Contributors: Procópio Stein, procopiostein
+
 0.0.20 (2020-04-06)
 -------------------
 * Merge branch 'simple-model-fixes' into 'erbium-devel'

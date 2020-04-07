@@ -10,6 +10,15 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'fix-tests' into 'erbium-devel'
+  Fix tests
+  See merge request robots/simple_models_robot!24
+* Revert "simplified args and fixed test"
+  This reverts commit 6c709cacef3b7b4152b9117500792d6eaa0f76c0.
+* Contributors: Procópio Stein, procopiostein
+
 0.0.20 (2020-04-06)
 -------------------
 
