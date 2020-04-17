@@ -2,6 +2,9 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.21 (2020-04-07)
 -------------------
 * Merge branch 'fix-tests' into 'erbium-devel'

@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'fix-launch-arg' into 'erbium-devel'
+  fix missing default arg for upload.launch
+  See merge request robots/simple_models_robot!26
+* fix missing default arg for upload.launch
+* Contributors: Procópio Stein, victor
+
 0.0.21 (2020-04-07)
 -------------------
 * Merge branch 'fix-tests' into 'erbium-devel'
