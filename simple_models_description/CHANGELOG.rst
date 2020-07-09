@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'safety' into 'erbium-devel'
+  Add velocity and effort limits for pal_local_joint_control
+  See merge request robots/simple_models_robot!27
+* Add velocity and effort limits for pal_local_joint_control
+* Contributors: Adria Roig, victor
+
 0.0.22 (2020-04-17)
 -------------------
 * Merge branch 'fix-launch-arg' into 'erbium-devel'

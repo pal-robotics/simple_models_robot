@@ -5,6 +5,14 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
+Forthcoming
+-----------
+* Merge branch 'safety' into 'erbium-devel'
+  Add velocity and effort limits for pal_local_joint_control
+  See merge request robots/simple_models_robot!27
+* Add max_impulse_distance parameter
+* Contributors: Adrià Roig, victor
+
 0.0.22 (2020-04-17)
 -------------------
 
