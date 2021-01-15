@@ -2,7 +2,7 @@
 
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find stockbot_description)/urdf/sensors/sick_tim551_laser.urdf.xacro"/>
+  <xacro:include filename="$(find stockbot_description)/urdf/sensors/sick_tim571_laser.urdf.xacro"/>
   <xacro:include filename="$(find stockbot_description)/urdf/sensors/imu.urdf.xacro"/>
   <xacro:include filename="$(find stockbot_description)/urdf/sensors/elp_rgb.urdf.xacro"/>
   <xacro:include filename="$(find stockbot_description)/urdf/sensors/structure_sensor.urdf.xacro"/>
@@ -54,7 +54,7 @@
     </joint> -->
 
     <!-- Laser -->
-    <xacro:sick_tim551_laser
+    <xacro:sick_tim571_laser
       name="${parent}_laser"
       parent="${parent}"
       ros_topic="scan_raw"
@@ -66,7 +66,7 @@
              ${base_laser_y} 
              ${base_laser_z}" 
         rpy="${180 * deg_to_rad} 0 0" />
-    </xacro:sick_tim551_laser>
+    </xacro:sick_tim571_laser>
 
     <!-- Depth "base" -->
     <xacro:structure_sensor
