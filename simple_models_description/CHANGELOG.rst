@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'sick_tim571' into 'erbium-devel'
+  stockbot laser updated
+  See merge request robots/simple_models_robot!28
+* stockbot laser updated
+* Contributors: noeperez, victor
+
 0.0.23 (2020-07-09)
 -------------------
 * Merge branch 'safety' into 'erbium-devel'
