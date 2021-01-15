@@ -5,8 +5,8 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
-Forthcoming
------------
+0.0.24 (2021-01-15)
+-------------------
 
 0.0.23 (2020-07-09)
 -------------------
