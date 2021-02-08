@@ -6,9 +6,6 @@
   <xacro:arg name="laser_model" default="sick-571"/> <!-- false, hokuyo, sick-551, sick-561, sick-571-->
   <xacro:property name="robot_model" value="$(arg robot)" />
   <xacro:property name="laser_model" value="$(arg laser_model)" />
-  <xacro:if value="${robot_model not in ['simple_pmb2', 'simple_stockbot']}">
-    <xacro:wrong_robot_model/>
-  </xacro:if>
   <xacro:if value="${laser_model not in ['false', False, 'sick-551', 'sick-561', 'sick-571', 'hokuyo']}">
     <xacro:wrong_laser_model/>
   </xacro:if>
@@ -23,16 +20,17 @@
     <xacro:include filename="$(find pmb2_description)/gazebo/gazebo.urdf.xacro" />
     <xacro:include filename="$(find pmb2_description)/urdf/materials.urdf.xacro" />
     <xacro:include filename="$(find simple_models_description)/urdf/sensors.urdf.xacro" />
+    <xacro:base_sensors name="base" laser_model="$(arg laser_model)"/>
   </xacro:if>
 
   <xacro:if value="${robot_model == 'simple_stockbot'}">
     <xacro:include filename="$(find stockbot_description)/gazebo/gazebo.urdf.xacro" />
     <xacro:include filename="$(find stockbot_description)/urdf/materials.urdf.xacro" />
     <xacro:include filename="$(find simple_models_description)/urdf/stockbot_sensors.urdf.xacro" />
+    <xacro:base_sensors name="base" laser_model="$(arg laser_model)"/>
   </xacro:if>
 
   <xacro:include filename="$(find simple_models_description)/urdf/gazebo.urdf.xacro" />
 
-  <xacro:base_sensors name="base" laser_model="$(arg laser_model)"/>
 
 </robot>
