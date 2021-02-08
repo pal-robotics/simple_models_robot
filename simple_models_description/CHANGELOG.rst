@@ -10,6 +10,16 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'fleet-fixes' into 'erbium-devel'
+  Ignore model_name in simple_models robot
+  See merge request robots/simple_models_robot!29
+* Add missing test dependency
+* Don't use base sensors if not pmb2 or stockbot
+* Ignore model_name in simple_models robot
+* Contributors: Victor Lopez, victor
+
 0.0.24 (2021-01-15)
 -------------------
 * Merge branch 'sick_tim571' into 'erbium-devel'

@@ -2,6 +2,9 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.0.24 (2021-01-15)
 -------------------
 
