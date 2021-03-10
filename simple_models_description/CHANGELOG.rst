@@ -10,6 +10,16 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'kangaroo_transmission' into 'erbium-devel'
+  added a box link and joint with transmission for pal physics simulator testing
+  See merge request robots/simple_models_robot!31
+* remove simple_stockbot test
+* added a box link and joint with transmission for pal physics simulator testing
+* Removed stockbot_description because it breaks public simulation
+* Contributors: Sai Kishor Kothakota, Victor Lopez, victor
+
 0.0.25 (2021-02-08)
 -------------------
 * Merge branch 'fleet-fixes' into 'erbium-devel'
