@@ -10,8 +10,8 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+0.0.28 (2021-09-01)
+-------------------
 * Merge branch 'gallium_fixes' into 'erbium-devel'
   Gallium fixes
   See merge request robots/simple_models_robot!32
