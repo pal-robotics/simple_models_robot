@@ -10,6 +10,9 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+
 0.0.26 (2021-03-10)
 -------------------
 * Merge branch 'kangaroo_transmission' into 'erbium-devel'

@@ -5,6 +5,11 @@ Changelog for package simple_models_controller_configuration
 0.0.4 (2018-06-12)
 ------------------
 
+Forthcoming
+-----------
+* Add ballscrew parameters in actuators params
+* Contributors: Sai Kishor Kothakota
+
 0.0.26 (2021-03-10)
 -------------------
 
