@@ -10,6 +10,11 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Another xacro instead of xacro.py
+* Contributors: Jordan Palacios
+
 0.0.28 (2021-09-01)
 -------------------
 * Merge branch 'gallium_fixes' into 'erbium-devel'
