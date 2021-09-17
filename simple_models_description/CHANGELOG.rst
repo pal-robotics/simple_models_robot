@@ -10,8 +10,8 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+0.0.29 (2021-09-17)
+-------------------
 * Another xacro instead of xacro.py
 * Contributors: Jordan Palacios
 
