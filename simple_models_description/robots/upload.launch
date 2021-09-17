@@ -6,8 +6,7 @@
 
   <!-- Robot description -->
   <param name="robot_description"
-      command="$(find xacro)/xacro.py --inorder
-              '$(find simple_models_description)/robots/robot.urdf.xacro'
+      command="xacro '$(find simple_models_description)/robots/robot.urdf.xacro'
     laser_model:=$(arg laser_model)
     robot:=$(arg robot)
     model_name:=$(arg model_name)
