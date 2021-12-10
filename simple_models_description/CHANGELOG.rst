@@ -10,8 +10,8 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
-Forthcoming
------------
+0.0.30 (2021-12-10)
+-------------------
 * Merge branch 'fix-simple-pmb2-odom-topic' into 'erbium-devel'
   Fix topic for pmb2 odom
   See merge request robots/simple_models_robot!34

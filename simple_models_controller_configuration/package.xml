@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>simple_models_controller_configuration</name>
-  <version>0.0.29</version>
+  <version>0.0.30</version>
   <description>The simple_models_controller_configuration package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
