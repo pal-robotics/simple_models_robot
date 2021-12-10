@@ -27,7 +27,7 @@
       <robotNamespace>/</robotNamespace>
       <commandTopic>/mobile_base_controller/cmd_vel</commandTopic>
     </xacro:unless>
-    <odometryTopic>odom</odometryTopic>
+    <odometryTopic>mobile_base_controller/odom</odometryTopic>
     <odometryFrame>odom</odometryFrame>
     <robotBaseFrame>base_link</robotBaseFrame>
     <odometrySource>0</odometrySource>
