@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'fix-simple-pmb2-odom-topic' into 'erbium-devel'
+  Fix topic for pmb2 odom
+  See merge request robots/simple_models_robot!34
+* Fix topic for pmb2 odom
+* Contributors: Victor Lopez, victor
+
 0.0.29 (2021-09-17)
 -------------------
 * Another xacro instead of xacro.py
