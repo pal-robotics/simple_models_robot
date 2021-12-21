@@ -3,6 +3,7 @@
   <arg name="robot"/>
   <arg name="multi" default=""/>
   <arg name="model_name" default="pmb2"/>
+  <arg name="camera_model" default="structure"/>
 
   <!-- Robot description -->
   <param name="robot_description"
@@ -10,6 +11,7 @@
     laser_model:=$(arg laser_model)
     robot:=$(arg robot)
     model_name:=$(arg model_name)
-    $(arg multi)"/>
+    $(arg multi)
+    camera_model:=$(arg camera_model)"/>
 
 </launch>
