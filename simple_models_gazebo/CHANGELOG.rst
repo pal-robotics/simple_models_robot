@@ -2,8 +2,8 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.0.31 (2022-01-26)
+-------------------
 * Merge branch 'realsense-fix-test' into 'erbium-devel'
   Realsense fix test
   See merge request robots/simple_models_robot!36
