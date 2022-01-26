@@ -4,6 +4,7 @@
   <arg name="robot"              default="simple_pmb2"/>
   <arg name="model_name"         default="pmb2"/>
   <arg name="multi"              default=""/>
+  <arg name="camera_model"       default="structure"/>
 
   <param name="pal_robot_info/type" type="str" value="$(arg model_name)"/>
 
@@ -13,6 +14,7 @@
     <arg name="robot" value="$(arg robot)"/>
     <arg name="multi" value="$(arg multi)"/>
     <arg name="model_name"  value="$(arg model_name)"/>
+    <arg name="camera_model" value="$(arg camera_model)"/>
   </include>
 
   <!-- Spawn robot in Gazebo -->

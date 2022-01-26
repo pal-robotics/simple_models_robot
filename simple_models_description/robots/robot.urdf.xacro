@@ -13,6 +13,8 @@
   <xacro:arg name="namespace" default=""/>
   <xacro:property name="is_multiple" value="$(arg multiple)" />
   <xacro:property name="nsp" value="$(arg namespace)" />
+  <xacro:arg name="camera_model" default="structure"/>
+  <xacro:property name="camera_model" value="$(arg camera_model)"/>
 
   <xacro:include filename="$(find simple_models_description)/urdf/$(arg robot).urdf.xacro" />
 
