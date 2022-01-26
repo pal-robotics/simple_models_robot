@@ -2,6 +2,14 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'realsense-fix-test' into 'erbium-devel'
+  Realsense fix test
+  See merge request robots/simple_models_robot!36
+* Using camera_model in the symplified version of the robot urdf
+* Contributors: Jordan Palacios, antoniobrandi
+
 0.0.30 (2021-12-10)
 -------------------
 
