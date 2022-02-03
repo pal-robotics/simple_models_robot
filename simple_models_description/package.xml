@@ -14,8 +14,6 @@
 
   <exec_depend>xacro</exec_depend>
   <exec_depend>pmb2_description</exec_depend>
-  <exec_depend>stockbot_description</exec_depend>
-  <exec_depend>mynteye_description</exec_depend>
   <exec_depend>realsense2_description</exec_depend>
 
   <test_depend>urdf_test</test_depend>
