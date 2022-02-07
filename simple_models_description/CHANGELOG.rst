@@ -10,6 +10,15 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'fix-pub-sim' into 'erbium-devel'
+  Removing stockbot_description and mynteye_description since were breaking the pub sim
+  See merge request robots/simple_models_robot!37
+* Added details for removal
+* Removing stockbot_description and mynteye_description since were breaking the pub sim
+* Contributors: antoniobrandi, saikishor
+
 0.0.31 (2022-01-26)
 -------------------
 * Merge branch 'realsense-fix-test' into 'erbium-devel'
