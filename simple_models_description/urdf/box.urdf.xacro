@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+  <!--File includes-->
+  <xacro:include filename="$(find simple_models_description)/urdf/transmission.urdf.xacro" />
+
   <link name="base_link">
     <visual>
       <geometry>
@@ -73,17 +76,6 @@
     <dynamics friction="1.0" damping="1.0"/>
   </joint>
 
-  <transmission name="box_joint_trans">
-     <type>transmission_interface/SimpleTransmission</type>
-     <actuator name="box_motor" >
-       <mechanicalReduction> 1.0 </mechanicalReduction>
-     </actuator>
-     <joint name="box_joint">
-       <offset>0.0</offset>
-       <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
-       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
-       <hardwareInterface>hardware_interface/JointStateInterface</hardwareInterface>
-     </joint>
-  </transmission>
+  <xacro:simple_transmission name="box" reduction="1.0" />
 
 </robot>

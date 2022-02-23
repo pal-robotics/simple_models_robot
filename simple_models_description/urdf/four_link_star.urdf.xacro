@@ -1,6 +1,8 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 
+    <!--File includes-->
+    <xacro:include filename="$(find simple_models_description)/urdf/transmission.urdf.xacro" />
     <link name="base_link">
         <inertial>
             <mass value="1.0"/>
@@ -73,6 +75,10 @@
             <origin rpy="0 0 0" xyz="0 0 500"/>
         </inertial>
     </link>
+
+    <xacro:simple_transmission name="arm_1" reduction="1.0" />
+    <xacro:simple_transmission name="arm_2" reduction="1.0" />
+    <xacro:simple_transmission name="arm_3" reduction="1.0" />
 
 </robot>
 
