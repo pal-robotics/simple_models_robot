@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'fix_breaking_transmission_fix' into 'erbium-devel'
+  add transmissions to the simple URDFs
+  See merge request robots/simple_models_robot!39
+* add transmissions to the simple URDFs
+* Contributors: Sai Kishor Kothakota, saikishor
+
 0.0.32 (2022-02-07)
 -------------------
 * Merge branch 'fix-pub-sim' into 'erbium-devel'
