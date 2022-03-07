@@ -12,7 +12,7 @@
         <mesh filename="package://stockbot_description/meshes/base/base_and_cover.stl" scale="${mesh_scale} ${mesh_scale} ${mesh_scale}"/>
       </geometry>
       <material name="DarkGrey" />
-      <origin rpy="0 0 0.1" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
     </visual>
 
     <collision>
@@ -20,7 +20,7 @@
         <mesh filename="package://stockbot_description/meshes/base/base_and_cover.stl" scale="${mesh_scale} ${mesh_scale} ${mesh_scale}"/>
       </geometry>
       <material name="DarkGrey" />
-      <origin rpy="0 0 0.1" xyz="0 0 0"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
     </collision>
     
     <inertial>
