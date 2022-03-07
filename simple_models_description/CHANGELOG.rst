@@ -10,6 +10,14 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+* Merge branch 'mlu/fix/cover-rotation' into 'erbium-devel'
+  Remove rotation of base/cover in simple_stockbot
+  See merge request robots/simple_models_robot!40
+* Remove rotation of base/cover in simple_stockbot
+* Contributors: Mathias Lüdtke, yueerro
+
 0.0.33 (2022-02-24)
 -------------------
 * Merge branch 'fix_breaking_transmission_fix' into 'erbium-devel'
