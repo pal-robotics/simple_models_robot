@@ -5,8 +5,10 @@
   <arg name="model_name"         default="pmb2"/>
   <arg name="multi"              default=""/>
   <arg name="camera_model"       default="structure"/>
+  <arg name="robot_type" value="stockbot" if="$(eval arg('robot') == 'simple_stockbot')"/>
+  <arg name="robot_type" value="pmb2" if="$(eval arg('robot') == 'simple_pmb2')"/>
 
-  <param name="pal_robot_info/type" type="str" value="$(arg model_name)"/>
+  <param name="pal_robot_info/type" type="str" value="$(arg robot_type)"/>
 
   <!-- Robot model -->
   <include file="$(find simple_models_description)/robots/upload.launch">
