@@ -2,6 +2,14 @@
 Changelog for package simple_models_gazebo
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/map-manager' into 'erbium-devel'
+  changed robot model with robot type
+  See merge request robots/simple_models_robot!43
+* changed robot model with robot type
+* Contributors: antoniobrandi
+
 0.0.34 (2022-03-07)
 -------------------
 

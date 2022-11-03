@@ -10,6 +10,9 @@ Changelog for package simple_models_description
 * Add tests, follow conventions regarding launch files.
 * Contributors: Hilario Tome, alexandersherikov
 
+Forthcoming
+-----------
+
 0.0.34 (2022-03-07)
 -------------------
 * Merge branch 'mlu/fix/cover-rotation' into 'erbium-devel'
